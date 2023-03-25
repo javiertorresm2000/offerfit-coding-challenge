@@ -1,0 +1,220 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+
+* {
+  font-family: 'Montserrat';
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.sidebar{
+  width: 270px;
+  min-width: 270px;
+  height: 100vh;
+  max-height: 100vh;
+  background: linear-gradient(180deg, #222737 0%, #080419 100%);
+  transition: all .3s;
+
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dcdcdc;
+    padding: 25px;
+
+    span {
+      font-size: 40px;
+      text-align: center;
+      line-height: normal;
+    }
+  }
+  nav{
+    max-height: 100vh;
+  }
+}
+
+.menu-list{
+  .nav-item{
+    padding: 5px 5px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #ccc;
+    cursor: pointer;
+
+    .menu-item{
+      padding: 10px 15px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      transition: .3s;
+      cursor: pointer;
+      &:hover{
+        color: #dcdcdc;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+      label{
+        cursor: pointer;
+      }
+      i {
+        width: 20px;
+        margin-right: 15px;
+      }
+      label{
+        margin-top: 3px;
+      }
+      &.selected {
+        color: #ddd;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+  }
+}
+
+.layout{
+  width: 100%;
+  height: 100vh;
+  background-color: #f1f5f9;
+}
+
+.topbar{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 30px 10px 15px;
+  box-shadow: 0px 1px 3px 0px rgba(64,80,110,0.2);
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(64,80,110,0.2);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(64,80,110,0.2);
+  background-color: white;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+
+  .chart-vertical-legend {
+    writing-mode: vertical-lr;
+    text-orientation:mixed;
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    padding-left: 10px;
+    color: #777;
+  }
+
+  .chart-content {
+    margin-top: 15px;
+    width: 100%;
+    height: 400px;
+    div {
+      height: inherit;
+    }
+  }
+}
+
+.total-offers-card {
+  width: auto;
+  height: 50px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #f8f8f8 0%, #4629c767 250%);
+  border: 2px solid #eee;
+  padding: 0px 60px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  label {
+    padding-right: 60px;
+    font-weight: 500;
+    border-right: 2px solid #ccc;
+  }
+  span {
+    padding-left: 60px;
+    font-weight: 700;
+  }
+}
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+  padding: 15px 50px;
+
+  .card {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-radius: 8px;
+    border: 2px solid #eee;
+    position: relative;
+    padding: 10px 15px;
+    margin: 0px 7.5px;
+
+    .total-title {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .total-span {
+      font-weight: 600;
+      font-size: 24px;
+    }
+  }
+}
+
+.mb-3 {
+  margin-bottom: 15px !important;
+}
+
+.bg-card-1{
+  background: linear-gradient(180deg, #f8f8f8 0%, #ff000067 250%);
+}
+
+.bg-card-2{
+  background: linear-gradient(180deg, #f8f8f8 0%, #fff70067 250%);
+}
+
+.bg-card-3{
+  background: linear-gradient(180deg, #f8f8f8 0%, #00ff3767 250%);
+}
+
+.bg-card-4{
+  background: linear-gradient(180deg, #f8f8f8 0%, #00ddff67 250%);
+}
